@@ -1,0 +1,47 @@
+html, body {
+  margin: 30px;
+}
+
+.progress-bar {
+  /*border: 1px solid #DDDDDD;*/
+  /*margin: 1rem 0;*/
+  position: relative;
+  /*-ms-touch-action: none;
+  touch-action: none;*/
+  display: block;
+  width: 100%;
+  background: #FAFAFA;
+  height: 16px;
+	border-radius: 72px;
+  background-color: #ffffff;
+	border: solid 0.5px #a9a3a1;
+  /*cursor: pointer;*/
+}
+.progress-bar-completed {
+  /*background: #0c76be;*/
+  /*border-radius: 10px;*/
+  display: block;
+  /*border: solid 0.5px #0c76be;*/
+  position: absolute;
+  /*top: -1;*/
+  height: 100%;
+  /*width: 100px;*/
+}
+.progress-bar-completed-left-chunk {
+  border-top-left-radius: 72px;
+  border-bottom-left-radius: 72px;
+}
+.progress-bar-completed-right-chunk {
+  border-top-right-radius: 72px;
+  border-bottom-right-radius: 72px;
+}
+.progress-bar-left-label {
+  float: left;
+  width: 50%;
+}
+.progress-bar-right-label {
+  float: right;
+}
+#updateBtn {
+  margin-top: 20px;
+}

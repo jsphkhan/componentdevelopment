@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<!-- Import Component CSS -->
+		<link rel="stylesheet" type="text/css" href="popup/popup.css">
+	</head>
+	<body>
+		<div style="float: left; margin-right: 20px;">
+			<button id="sbtn1">Show Popup1</button>
+			<p></p>
+			<button id="hbtn1">Hide Popup1</button>
+		</div>
+		<div>
+			<button id="sbtn2">Show Popup2</button>
+			<p></p>
+			<button id="hbtn2">Hide Popup2</button>
+		</div>
+
+		<!-- Scripts -->
+		<script type="text/javascript" src="popup/popup.js"></script>
+		<script type="text/javascript">
+			(function() {
+				var sbtn1 = document.querySelector("#sbtn1");
+				var sbtn2 = document.querySelector("#sbtn2");
+				var hbtn1 = document.querySelector("#hbtn1");
+				var hbtn2 = document.querySelector("#hbtn2");
+
+				var args1 = {
+					headerMsg: "I am a pop up",
+					bodyMsg: "See I can be a reusable component!!. Try the other button and my brother will be invoked. Both are of same DNA",
+					mountTo: 'body',
+					width: 300,
+					height: 200,
+					modal: false
+				};
+
+				var args2 = {
+					headerMsg: "I am another pop up",
+					bodyMsg: "See I can be a reusable component!!. Try the other button and my brother will be invoked. Both are of same DNA",
+					mountTo: 'body',
+					width: 400,
+					height: 500,
+					modal: false
+				};
+
+				var popUp1 = new YDL.PopUp();
+				var popUp2 = new YDL.PopUp();
+				sbtn1.addEventListener('click', function() {
+					popUp1.show(args1);
+				}, false);
+				hbtn1.addEventListener('click', function() {
+					popUp1.hide();
+				}, false);
+
+				sbtn2.addEventListener('click', function() {
+					popUp2.show(args2);
+				}, false);
+				hbtn2.addEventListener('click', function() {
+					popUp2.hide();
+				}, false);
+			})()
+		</script>
+	</body>
+</html>

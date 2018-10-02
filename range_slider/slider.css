@@ -1,0 +1,67 @@
+html, body {
+  margin: 30px;
+}
+
+.range-slider {
+  /*border: 1px solid #DDDDDD;*/
+  /*margin: 1.11111rem 0;*/
+  position: relative;
+  -ms-touch-action: none;
+  touch-action: none;
+  display: block;
+  width: 100%;
+  background: #FAFAFA;
+  height: 4px;
+	border-radius: 47px;
+	background-color: #eeefee;
+	border: solid 0.5px #cdcac9;
+  cursor: pointer;
+}
+.range-slider-handle {
+  width: 16px;
+	height: 16px;
+	background-color: #0b598d;
+	box-shadow: 0.5px 0.5px 1px 0 rgba(0, 0, 0, 0.5);
+	border: solid 0.5px #ffffff;
+  border-radius: 50%;
+  /*border: 1px solid none;*/
+  cursor: pointer;
+  display: inline-block;
+  /*height: 1.22222rem;*/
+  position: absolute;
+  top: -7px;
+  /*width: 1.77778rem;*/
+  z-index: 1;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  /*background: #008CBA;*/
+  /*left:100px;*/
+}
+.range-slider-handle.drag-highlight {
+  background-color: #0c76be;
+}
+.range-slider-fill {
+  background: #0c76be;
+  border-radius: 10px;
+  display: block;
+  border: solid 0.5px #0c76be;
+  position: absolute;
+  top: -1;
+  height: 100%;
+  /*width: 100px;*/
+}
+.range-slider-right-fill {
+  /*background: #ff0000;*/
+  display: block;
+  position: absolute;
+  top: -1;
+  right: 0;
+  width: 0px;
+  height: 100%;
+  /*width: 100px;*/
+}
+.range-slider-right-fill.active {
+  /*border: solid 0.5px #ff0000;*/
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
